@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Splash extends React.Component {
+class SplashForm extends React.Component {
     constructor() {
       super();
     }
@@ -11,4 +11,4 @@ class Splash extends React.Component {
     }
 }
 
-export default Splash;
+export default SplashForm;

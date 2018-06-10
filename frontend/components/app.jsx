@@ -6,12 +6,12 @@ import {
     Link,
     HashRouter
 } from 'react-router-dom';
-import Splash from "./greeting/splash";
+import SplashFormContainer from "./greeting/splash_form_container";
 
 const App = () => (
     <div>
         <Switch>
-            <Route exact path="/" component={Splash} />
+            <Route exact path="/" component={SplashFormContainer} />
         </Switch>
     </div>
 );

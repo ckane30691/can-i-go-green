@@ -20,3 +20,37 @@ const configureStore = (preloadedState = {}) => (
 );
 
 export default configureStore;
+
+// {
+//     "id": "Assigned by database",
+//     "company": "",
+//     "city": "",
+//     "country": "",
+//     "item": "",
+//     "sustainableOption": {
+//         "name": "",
+//         "costPerItem": {
+//             "total": "",
+//             "breakdown": {
+//                 "First variable-your own variables, in terms of cost per item": "",
+//                 "Second variable": "",
+//                 "Third variable": ""
+//             }
+//         },
+//         "quantity": "",
+//         "usesPerItem": ""
+//     },
+//     "disposableOption": {
+//         "name": "",
+//         "costPerItem": {
+//             "total": "",
+//             "breakdown": {
+//                 "First variable": "",
+//                 "Second variable": "",
+//                 "Third variable": ""
+//             }
+//         },
+//         "quantity": "",
+//         "usesPerItem": ""
+//     }
+// }
