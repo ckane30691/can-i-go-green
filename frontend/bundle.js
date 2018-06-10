@@ -26457,6 +26457,26 @@ var App = function App() {
         'div',
         null,
         _react2.default.createElement(
+            'header',
+            null,
+            _react2.default.createElement(
+                _reactRouterDom.Link,
+                { to: '/' },
+                _react2.default.createElement('img', { src: 'https://s3.amazonaws.com/can-i-go-green/earth-icon-large.png' })
+            ),
+            _react2.default.createElement(
+                'h1',
+                null,
+                'Can I Go Green?'
+            ),
+            _react2.default.createElement(
+                _reactRouterDom.Link,
+                { to: '/profiles',
+                    className: 'profile-btn' },
+                'Look at Profiles'
+            )
+        ),
+        _react2.default.createElement(
             _reactRouterDom.Switch,
             null,
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _splash_form_container2.default })
@@ -26693,7 +26713,7 @@ exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapSt
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+            value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -26715,224 +26735,227 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var ProfileForm = function (_React$Component) {
-	_inherits(ProfileForm, _React$Component);
+            _inherits(ProfileForm, _React$Component);
 
-	function ProfileForm(props) {
-		_classCallCheck(this, ProfileForm);
+            function ProfileForm(props) {
+                        _classCallCheck(this, ProfileForm);
 
-		var _this = _possibleConstructorReturn(this, (ProfileForm.__proto__ || Object.getPrototypeOf(ProfileForm)).call(this, props));
+                        var _this = _possibleConstructorReturn(this, (ProfileForm.__proto__ || Object.getPrototypeOf(ProfileForm)).call(this, props));
 
-		_this.state = _this.props.profile;
-		_this.handleSubmit = _this.handleSubmit.bind(_this);
-		return _this;
-	}
+                        _this.state = _this.props.profile;
+                        _this.handleSubmit = _this.handleSubmit.bind(_this);
+                        return _this;
+            }
 
-	_createClass(ProfileForm, [{
-		key: 'componentDidMount',
-		value: function componentDidMount() {
-			if (this.props.match.params.profileId) {
-				this.props.fetchProfile(this.props.match.params.profileId);
-			}
-		}
-	}, {
-		key: 'componentWillReceiveProps',
-		value: function componentWillReceiveProps(newProps) {
-			this.setState(newProps.profile);
-		}
-	}, {
-		key: 'update',
-		value: function update(field) {
-			var _this2 = this;
+            _createClass(ProfileForm, [{
+                        key: 'componentDidMount',
+                        value: function componentDidMount() {
+                                    if (this.props.match.params.profileId) {
+                                                this.props.fetchProfile(this.props.match.params.profileId);
+                                    }
+                        }
+            }, {
+                        key: 'componentWillReceiveProps',
+                        value: function componentWillReceiveProps(newProps) {
+                                    this.setState(newProps.profile);
+                        }
+            }, {
+                        key: 'update',
+                        value: function update(field) {
+                                    var _this2 = this;
 
-			return function (e) {
-				return _this2.setState(_defineProperty({}, field, e.target.value));
-			};
-		}
-	}, {
-		key: 'handleSubmit',
-		value: function handleSubmit(e) {
-			e.preventDefault();
-			this.props.createProfile(this.state);
-			// .then(() => this.props.history.push('/profiles'));
-		}
-	}, {
-		key: 'render',
-		value: function render() {
-			var company = this.state ? this.state.company : "";
-			var employeeSize = this.state ? this.state.employeeSize : "";
-			var city = this.state ? this.state.city : "";
-			var country = this.state ? this.state.country : "";
-			var salesVolume = this.state ? this.state.salesVolume : "";
-			var item = this.state ? this.state.item : "";
-			var sustainableOptionName = this.state ? this.state.sustainableOptionName : "";
-			var sustainableOptionCostPerItem = this.state ? this.state.sustainableOptionCostPerItem : "";
-			var sustainablePurchase = this.state ? this.state.sustainablePurchase : "";
-			var cleaning = this.state ? this.state.cleaning : "";
-			var installation = this.state ? this.state.installation : "";
-			var kWhOfSystem = this.state ? this.state.kWhOfSystem : "";
-			var costOfSystemPrerebate = this.state ? this.state.costOfSystemPrerebate : "";
-			var federalTaxCredit = this.state ? this.state.federalTaxCredit : "";
-			var cleanCredits = this.state ? this.state.cleanCredits : "";
-			var benefits = this.state ? this.state.benefits : "";
-			var kWhCost = this.state ? this.state.kWhCost : "";
-			var sustainableOptionQuantity = this.state ? this.state.sustainableOptionQuantity : "";
-			var sustainableOptionUsesPerItemQuantity = this.state ? this.state.sustainableOptionUsesPerItemQuantity : "";
-			var sustainableOptionSalesFactor = this.state ? this.state.sustainableOptionSalesFactor : "";
-			var disposableOptionName = this.state ? this.state.disposableOptionName : "";
-			var disposableOptionCostPerItem = this.state ? this.state.disposableOptionCostPerItem : "";
-			var disposablePurchase = this.state ? this.state.disposablePurchase : "";
-			var disposal = this.state ? this.state.disposal : "";
-			var disposableOptionQuantity = this.state ? this.state.disposableOptionQuantity : "";
-			var disposableOptionusesPerItemQuantity = this.state ? this.state.disposableOptionusesPerItemQuantity : "";
-			var disposableOptionusesPerItemsalesFactor = this.state ? this.state.disposableOptionusesPerItemsalesFactor : "";
+                                    return function (e) {
+                                                return _this2.setState(_defineProperty({}, field, e.target.value));
+                                    };
+                        }
+            }, {
+                        key: 'handleSubmit',
+                        value: function handleSubmit(e) {
+                                    e.preventDefault();
+                                    this.props.createProfile(this.state);
+                                    // .then(() => this.props.history.push('/profiles'));
+                        }
+            }, {
+                        key: 'render',
+                        value: function render() {
+                                    var company = this.state ? this.state.company : "";
+                                    var employeeSize = this.state ? this.state.employeeSize : "";
+                                    var city = this.state ? this.state.city : "";
+                                    var country = this.state ? this.state.country : "";
+                                    var salesVolume = this.state ? this.state.salesVolume : "";
+                                    var item = this.state ? this.state.item : "";
+                                    var sustainableOptionName = this.state ? this.state.sustainableOptionName : "";
+                                    var sustainableOptionCostPerItem = this.state ? this.state.sustainableOptionCostPerItem : "";
+                                    var sustainablePurchase = this.state ? this.state.sustainablePurchase : "";
+                                    var cleaning = this.state ? this.state.cleaning : "";
+                                    var installation = this.state ? this.state.installation : "";
+                                    var kWhOfSystem = this.state ? this.state.kWhOfSystem : "";
+                                    var costOfSystemPrerebate = this.state ? this.state.costOfSystemPrerebate : "";
+                                    var federalTaxCredit = this.state ? this.state.federalTaxCredit : "";
+                                    var cleanCredits = this.state ? this.state.cleanCredits : "";
+                                    var benefits = this.state ? this.state.benefits : "";
+                                    var kWhCost = this.state ? this.state.kWhCost : "";
+                                    var sustainableOptionQuantity = this.state ? this.state.sustainableOptionQuantity : "";
+                                    var sustainableOptionUsesPerItemQuantity = this.state ? this.state.sustainableOptionUsesPerItemQuantity : "";
+                                    var sustainableOptionSalesFactor = this.state ? this.state.sustainableOptionSalesFactor : "";
+                                    var disposableOptionName = this.state ? this.state.disposableOptionName : "";
+                                    var disposableOptionCostPerItem = this.state ? this.state.disposableOptionCostPerItem : "";
+                                    var disposablePurchase = this.state ? this.state.disposablePurchase : "";
+                                    var disposal = this.state ? this.state.disposal : "";
+                                    var disposableOptionQuantity = this.state ? this.state.disposableOptionQuantity : "";
+                                    var disposableOptionusesPerItemQuantity = this.state ? this.state.disposableOptionusesPerItemQuantity : "";
+                                    var disposableOptionusesPerItemsalesFactor = this.state ? this.state.disposableOptionusesPerItemsalesFactor : "";
 
-			return _react2.default.createElement(
-				'div',
-				{ className: 'splash-profile-container' },
-				_react2.default.createElement(
-					'form',
-					{ onSubmit: this.handleSubmit },
-					_react2.default.createElement('input', { required: true, type: 'text',
-						value: company,
-						onChange: this.update('company'),
-						className: 'profile-input',
-						placeholder: 'Company Name' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: city,
-						onChange: this.update('city'),
-						className: 'profile-input',
-						placeholder: 'City' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: country,
-						onChange: this.update('country'),
-						className: 'profile-input',
-						placeholder: 'Country' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: salesVolume,
-						onChange: this.update('salesVolume'),
-						className: 'profile-input',
-						placeholder: 'Sales Volume' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: item,
-						onChange: this.update('item'),
-						className: 'profile-input',
-						placeholder: 'Item Name' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: sustainableOptionName,
-						onChange: this.update('sustainableOptionName'),
-						className: 'profile-input',
-						placeholder: 'Name of Sustainable Option' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: sustainableOptionCostPerItem,
-						onChange: this.update('sustainableOptionCostPerItem'),
-						className: 'profile-input',
-						placeholder: 'Cost of Sustainable Option Per Item' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: sustainablePurchase,
-						onChange: this.update('sustainablePurchase'),
-						className: 'profile-input',
-						placeholder: 'Total Cost Of Sustainable Purchase' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: cleaning,
-						onChange: this.update('cleaning'),
-						className: 'profile-input',
-						placeholder: 'Cleaning Cost' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: installation,
-						onChange: this.update('installation'),
-						className: 'profile-input',
-						placeholder: 'Installation Cost' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: kWhOfSystem,
-						onChange: this.update('kWhOfSystem'),
-						className: 'profile-input',
-						placeholder: 'Kilowatt Cost of System' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: sustainableOptionQuantity,
-						onChange: this.update('sustainableOptionQuantity'),
-						className: 'profile-input',
-						placeholder: 'Quantitiy of sustainable items' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: sustainableOptionUsesPerItemQuantity,
-						onChange: this.update('sustainableOptionUsesPerItemQuantity'),
-						className: 'profile-input',
-						placeholder: 'Number of uses per item' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: sustainableOptionSalesFactor,
-						onChange: this.update('sustainableOptionSalesFactor'),
-						className: 'profile-input',
-						placeholder: 'Sales factor for sustainable option' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: disposableOptionName,
-						onChange: this.update('disposableOptionName'),
-						className: 'profile-input',
-						placeholder: 'Name of disposable option' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: disposableOptionCostPerItem,
-						onChange: this.update('disposableOptionCostPerItem'),
-						className: 'profile-input',
-						placeholder: 'Total cost including the purchase and disposal of the Disposable Option Per Item' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: disposablePurchase,
-						onChange: this.update('disposablePurchase'),
-						className: 'profile-input',
-						placeholder: 'Total per unit cost to purchase the disposable item' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: disposal,
-						onChange: this.update('disposal'),
-						className: 'profile-input',
-						placeholder: 'Total cost of disposable purchase' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: disposableOptionQuantity,
-						onChange: this.update('disposableOptionQuantity'),
-						className: 'profile-input',
-						placeholder: 'Number of disposable units to be purchased' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: disposableOptionusesPerItemQuantity,
-						onChange: this.update('disposableOptionusesPerItemQuantity'),
-						className: 'profile-input',
-						placeholder: 'Number of uses per item for disposable option' }),
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'text',
-						value: disposableOptionusesPerItemsalesFactor,
-						onChange: this.update('disposableOptionusesPerItemsalesFactor'),
-						className: 'profile-input',
-						placeholder: 'Sales Factor per item for disposable option' }),
-					_react2.default.createElement('input', {
-						className: 'profile-submit',
-						type: 'submit',
-						value: 'Save' })
-				),
-				_react2.default.createElement(
-					_reactRouterDom.Link,
-					{ to: '/profiles',
-						className: 'back-btn' },
-					'Look at Profiles'
-				)
-			);
-		}
-	}]);
+                                    return _react2.default.createElement(
+                                                'div',
+                                                { className: 'splash-body' },
+                                                _react2.default.createElement(
+                                                            'div',
+                                                            { className: 'splash-profile-container' },
+                                                            _react2.default.createElement(
+                                                                        'h1',
+                                                                        null,
+                                                                        'Create a Profile'
+                                                            ),
+                                                            _react2.default.createElement(
+                                                                        'form',
+                                                                        { onSubmit: this.handleSubmit },
+                                                                        _react2.default.createElement('input', { required: true, type: 'text',
+                                                                                    value: company,
+                                                                                    onChange: this.update('company'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Company Name' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: city,
+                                                                                    onChange: this.update('city'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'City' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: country,
+                                                                                    onChange: this.update('country'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Country' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: salesVolume,
+                                                                                    onChange: this.update('salesVolume'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Sales Volume' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: item,
+                                                                                    onChange: this.update('item'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Item Name' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: sustainableOptionName,
+                                                                                    onChange: this.update('sustainableOptionName'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Name of Sustainable Option' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: sustainableOptionCostPerItem,
+                                                                                    onChange: this.update('sustainableOptionCostPerItem'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Cost of Sustainable Option Per Item' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: sustainablePurchase,
+                                                                                    onChange: this.update('sustainablePurchase'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Total Cost Of Sustainable Purchase' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: cleaning,
+                                                                                    onChange: this.update('cleaning'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Cleaning Cost' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: installation,
+                                                                                    onChange: this.update('installation'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Installation Cost' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: kWhOfSystem,
+                                                                                    onChange: this.update('kWhOfSystem'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Kilowatt Cost of System' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: sustainableOptionQuantity,
+                                                                                    onChange: this.update('sustainableOptionQuantity'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Quantitiy of sustainable items' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: sustainableOptionUsesPerItemQuantity,
+                                                                                    onChange: this.update('sustainableOptionUsesPerItemQuantity'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Number of uses per item' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: sustainableOptionSalesFactor,
+                                                                                    onChange: this.update('sustainableOptionSalesFactor'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Sales factor for sustainable option' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: disposableOptionName,
+                                                                                    onChange: this.update('disposableOptionName'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Name of disposable option' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: disposableOptionCostPerItem,
+                                                                                    onChange: this.update('disposableOptionCostPerItem'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Total cost including the purchase and disposal of the Disposable Option Per Item' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: disposablePurchase,
+                                                                                    onChange: this.update('disposablePurchase'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Total per unit cost to purchase the disposable item' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: disposal,
+                                                                                    onChange: this.update('disposal'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Total cost of disposable purchase' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: disposableOptionQuantity,
+                                                                                    onChange: this.update('disposableOptionQuantity'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Number of disposable units to be purchased' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: disposableOptionusesPerItemQuantity,
+                                                                                    onChange: this.update('disposableOptionusesPerItemQuantity'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Number of uses per item for disposable option' }),
+                                                                        _react2.default.createElement('br', null),
+                                                                        _react2.default.createElement('input', { type: 'text',
+                                                                                    value: disposableOptionusesPerItemsalesFactor,
+                                                                                    onChange: this.update('disposableOptionusesPerItemsalesFactor'),
+                                                                                    className: 'profile-input',
+                                                                                    placeholder: 'Sales Factor per item for disposable option' }),
+                                                                        _react2.default.createElement('input', {
+                                                                                    className: 'profile-submit',
+                                                                                    type: 'submit',
+                                                                                    value: 'submit' })
+                                                            )
+                                                )
+                                    );
+                        }
+            }]);
 
-	return ProfileForm;
+            return ProfileForm;
 }(_react2.default.Component);
 
 exports.default = (0, _reactRouterDom.withRouter)(ProfileForm);

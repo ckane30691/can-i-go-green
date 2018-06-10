@@ -1,0 +1,88 @@
+body {
+  background-color: rgb(241, 227, 207);
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: flex;
+  background-color: rgb(197, 217, 122);
+  font-size: 1.25em;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-left: 20px;
+  margin-bottom: 20px;
+  height: 65px;
+  color: #283c46;
+  position: relative;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  border: 1px solid #bfbfbf;
+  padding: 0.75em 0.6em;
+  width: 78%;
+  border-radius: .2em;
+}
+
+header img {
+  height: 60px;
+  width: 60px;
+}
+
+.profile-btn {
+  position: absolute;
+  right: 40px;
+  font-size: .8em;
+  text-decoration: underline;
+}
+
+.splash-body {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.splash-profile-container {
+  background-color: #fff;
+  padding-top: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  width: 780px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: .2em;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.splash-profile-container h1 {
+  text-align: center;
+  font-size: 1.25em;
+  color: #283c46;
+  margin-bottom: 15px;
+}
+
+.profile-submit {
+  background-color: #3cb371;
+  color: #fff;
+  width: 150px;
+  font-size: .8em;
+  font-weight: bold;
+  padding: 0.75em 0.75em 0.75em 0.75em;
+  border-radius: 0.2em;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  border-color: rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+  margin-top: 25px;
+  text-align: center;
+
+}

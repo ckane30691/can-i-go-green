@@ -58,185 +58,184 @@ class ProfileForm extends React.Component {
 		const disposableOptionusesPerItemsalesFactor = this.state ? this.state.disposableOptionusesPerItemsalesFactor : "";
 
 			return(
-				<div className={`splash-profile-container`}>
-					<form onSubmit={this.handleSubmit}>
-						<input required type="text"
-							value={company}
-							onChange={this.update('company')}
-							className="profile-input"
-							placeholder="Company Name" />
+        <div className="splash-body">
+  				<div className={`splash-profile-container`}>
+            <h1>Create a Profile</h1>
+  					<form onSubmit={this.handleSubmit}>
+  						<input required type="text"
+  							value={company}
+  							onChange={this.update('company')}
+  							className="profile-input"
+  							placeholder="Company Name" />
 
-						<br/>
+  						<br/>
 
-						<input type="text"
-							value={city}
-							onChange={this.update('city')}
-							className="profile-input"
-							placeholder="City" />
+  						<input type="text"
+  							value={city}
+  							onChange={this.update('city')}
+  							className="profile-input"
+  							placeholder="City" />
 
-						<br/>
+  						<br/>
 
-						<input type="text"
-							value={country}
-							onChange={this.update('country')}
-							className="profile-input"
-							placeholder="Country" />
+  						<input type="text"
+  							value={country}
+  							onChange={this.update('country')}
+  							className="profile-input"
+  							placeholder="Country" />
 
-						<br/>
+  						<br/>
 
-						<input type="text"
-							value={salesVolume}
-							onChange={this.update('salesVolume')}
-							className="profile-input"
-							placeholder="Sales Volume" />
+  						<input type="text"
+  							value={salesVolume}
+  							onChange={this.update('salesVolume')}
+  							className="profile-input"
+  							placeholder="Sales Volume" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={item}
-							onChange={this.update('item')}
-							className="profile-input"
-							placeholder="Item Name" />
+  						<input type="text"
+  							value={item}
+  							onChange={this.update('item')}
+  							className="profile-input"
+  							placeholder="Item Name" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={sustainableOptionName}
-							onChange={this.update('sustainableOptionName')}
-							className="profile-input"
-							placeholder="Name of Sustainable Option" />
+  						<input type="text"
+  							value={sustainableOptionName}
+  							onChange={this.update('sustainableOptionName')}
+  							className="profile-input"
+  							placeholder="Name of Sustainable Option" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={sustainableOptionCostPerItem}
-							onChange={this.update('sustainableOptionCostPerItem')}
-							className="profile-input"
-							placeholder="Cost of Sustainable Option Per Item" />
+  						<input type="text"
+  							value={sustainableOptionCostPerItem}
+  							onChange={this.update('sustainableOptionCostPerItem')}
+  							className="profile-input"
+  							placeholder="Cost of Sustainable Option Per Item" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={sustainablePurchase}
-							onChange={this.update('sustainablePurchase')}
-							className="profile-input"
-							placeholder="Total Cost Of Sustainable Purchase" />
+  						<input type="text"
+  							value={sustainablePurchase}
+  							onChange={this.update('sustainablePurchase')}
+  							className="profile-input"
+  							placeholder="Total Cost Of Sustainable Purchase" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={cleaning}
-							onChange={this.update('cleaning')}
-							className="profile-input"
-							placeholder="Cleaning Cost" />
+  						<input type="text"
+  							value={cleaning}
+  							onChange={this.update('cleaning')}
+  							className="profile-input"
+  							placeholder="Cleaning Cost" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={installation}
-							onChange={this.update('installation')}
-							className="profile-input"
-							placeholder="Installation Cost" />
+  						<input type="text"
+  							value={installation}
+  							onChange={this.update('installation')}
+  							className="profile-input"
+  							placeholder="Installation Cost" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={kWhOfSystem}
-							onChange={this.update('kWhOfSystem')}
-							className="profile-input"
-							placeholder="Kilowatt Cost of System" />
+  						<input type="text"
+  							value={kWhOfSystem}
+  							onChange={this.update('kWhOfSystem')}
+  							className="profile-input"
+  							placeholder="Kilowatt Cost of System" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={sustainableOptionQuantity}
-							onChange={this.update('sustainableOptionQuantity')}
-							className="profile-input"
-							placeholder="Quantitiy of sustainable items" />
+  						<input type="text"
+  							value={sustainableOptionQuantity}
+  							onChange={this.update('sustainableOptionQuantity')}
+  							className="profile-input"
+  							placeholder="Quantitiy of sustainable items" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={sustainableOptionUsesPerItemQuantity}
-							onChange={this.update('sustainableOptionUsesPerItemQuantity')}
-							className="profile-input"
-							placeholder="Number of uses per item" />
+  						<input type="text"
+  							value={sustainableOptionUsesPerItemQuantity}
+  							onChange={this.update('sustainableOptionUsesPerItemQuantity')}
+  							className="profile-input"
+  							placeholder="Number of uses per item" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={sustainableOptionSalesFactor}
-							onChange={this.update('sustainableOptionSalesFactor')}
-							className="profile-input"
-							placeholder="Sales factor for sustainable option" />
+  						<input type="text"
+  							value={sustainableOptionSalesFactor}
+  							onChange={this.update('sustainableOptionSalesFactor')}
+  							className="profile-input"
+  							placeholder="Sales factor for sustainable option" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={disposableOptionName}
-							onChange={this.update('disposableOptionName')}
-							className="profile-input"
-							placeholder="Name of disposable option" />
+  						<input type="text"
+  							value={disposableOptionName}
+  							onChange={this.update('disposableOptionName')}
+  							className="profile-input"
+  							placeholder="Name of disposable option" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={disposableOptionCostPerItem}
-							onChange={this.update('disposableOptionCostPerItem')}
-							className="profile-input"
-							placeholder="Total cost including the purchase and disposal of the Disposable Option Per Item" />
+  						<input type="text"
+  							value={disposableOptionCostPerItem}
+  							onChange={this.update('disposableOptionCostPerItem')}
+  							className="profile-input"
+  							placeholder="Total cost including the purchase and disposal of the Disposable Option Per Item" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={disposablePurchase}
-							onChange={this.update('disposablePurchase')}
-							className="profile-input"
-							placeholder="Total per unit cost to purchase the disposable item" />
+  						<input type="text"
+  							value={disposablePurchase}
+  							onChange={this.update('disposablePurchase')}
+  							className="profile-input"
+  							placeholder="Total per unit cost to purchase the disposable item" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={disposal}
-							onChange={this.update('disposal')}
-							className="profile-input"
-							placeholder="Total cost of disposable purchase" />
+  						<input type="text"
+  							value={disposal}
+  							onChange={this.update('disposal')}
+  							className="profile-input"
+  							placeholder="Total cost of disposable purchase" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={disposableOptionQuantity}
-							onChange={this.update('disposableOptionQuantity')}
-							className="profile-input"
-							placeholder="Number of disposable units to be purchased" />
+  						<input type="text"
+  							value={disposableOptionQuantity}
+  							onChange={this.update('disposableOptionQuantity')}
+  							className="profile-input"
+  							placeholder="Number of disposable units to be purchased" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={disposableOptionusesPerItemQuantity}
-							onChange={this.update('disposableOptionusesPerItemQuantity')}
-							className="profile-input"
-							placeholder="Number of uses per item for disposable option" />
+  						<input type="text"
+  							value={disposableOptionusesPerItemQuantity}
+  							onChange={this.update('disposableOptionusesPerItemQuantity')}
+  							className="profile-input"
+  							placeholder="Number of uses per item for disposable option" />
 
-            <br/>
+              <br/>
 
-						<input type="text"
-							value={disposableOptionusesPerItemsalesFactor}
-							onChange={this.update('disposableOptionusesPerItemsalesFactor')}
-							className="profile-input"
-							placeholder="Sales Factor per item for disposable option" />
+  						<input type="text"
+  							value={disposableOptionusesPerItemsalesFactor}
+  							onChange={this.update('disposableOptionusesPerItemsalesFactor')}
+  							className="profile-input"
+  							placeholder="Sales Factor per item for disposable option" />
 
-						<input
-							className="profile-submit"
-							type="submit"
-							value="Save" />
+  						<input
+  							className="profile-submit"
+  							type="submit"
+  							value="submit" />
 
-					</form>
-					<Link to="/profiles"
-						className="back-btn">
-						Look at Profiles
-					</Link>
-				</div>
+  					</form>
+  				</div>
+        </div>
 			);
 	}
 }
