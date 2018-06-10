@@ -234,7 +234,7 @@ class ProfileForm extends React.Component {
 					</form>
 					<Link to="/profiles"
 						className="back-btn">
-						↷
+						Look at Profiles
 					</Link>
 				</div>
 			);

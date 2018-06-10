@@ -26926,7 +26926,7 @@ var ProfileForm = function (_React$Component) {
 					_reactRouterDom.Link,
 					{ to: '/profiles',
 						className: 'back-btn' },
-					'\u21B7'
+					'Look at Profiles'
 				)
 			);
 		}
