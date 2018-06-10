@@ -20,13 +20,15 @@ export const receiveProfileErrors = errors => ({
   errors
 });
 
-export const createProfile = profile => dispatch => (
-  APIUtil.createProfile(profile).then(profile => (
-    dispatch(receiveCurrentProfile(profile))
-  ), err => (
-    dispatch(receiveProfileErrors(err.responseJSON))
-  ))
-);
+export const createProfile = profile => dispatch => {
+  return APIUtil.createProfile(profile).then(profile => {
+    console.log(profile);
+    return dispatch(receiveCurrentProfile(profile));
+  }, err => {
+    console.log(err);
+    return dispatch(receiveProfileErrors(err.responseJSON));
+  });
+};
 
 export const fetchProfiles = () => dispatch => (
   APIUtil.fetchProfiles().then(profiles => (

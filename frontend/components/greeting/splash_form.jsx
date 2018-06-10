@@ -6,6 +6,7 @@ class ProfileForm extends React.Component {
 		super(props);
 		this.state = this.props.profile;
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.getMLInsights = this.getMLInsights.bind(this);
 	}
 
 	componentDidMount() {
@@ -16,6 +17,7 @@ class ProfileForm extends React.Component {
 
 	componentWillReceiveProps(newProps) {
 		this.setState(newProps.profile);
+    console.log(this.state)
 	}
 
 	update(field) {
@@ -24,13 +26,21 @@ class ProfileForm extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		this.props.createProfile(this.state)
+		this.props.createProfile().then(res => console.log(res));
 		// .then(() => this.props.history.push('/profiles'));
 	}
 
+  getMLInsights() {
+    console.log(this.props.profile[1]);
+    let obj = this.props.profile[1];
+    for (let key in obj) {
+      this.setState({[key]: obj[key]});
+    }
+  }
+
 	render() {
 		const company = this.state ? this.state.company : "";
-		const employeeSize = this.state ? this.state.employeeSize : "";
+		const employeeSize =  this.state ? this.state.employeeSize : "";
 		const city = this.state ? this.state.city : "";
 		const country = this.state ? this.state.country : "";
 		const salesVolume = this.state ? this.state.salesVolume : "";
@@ -61,6 +71,12 @@ class ProfileForm extends React.Component {
         <div className="splash-body">
   				<div className={`splash-profile-container`}>
             <h1>Create a Profile</h1>
+              <button
+                className="profile-submit"
+                onClick={this.getMLInsights} >
+                Get ML Insights
+              </button>
+              <br></br>
   					<form onSubmit={this.handleSubmit}>
   						<input required type="text"
   							value={company}
@@ -101,6 +117,7 @@ class ProfileForm extends React.Component {
   							placeholder="Item Name" />
 
               <br/>
+
 
   						<input type="text"
   							value={sustainableOptionName}
