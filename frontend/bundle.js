@@ -26948,7 +26948,7 @@ var ProfileForm = function (_React$Component) {
                                                                         _react2.default.createElement('input', {
                                                                                     className: 'profile-submit',
                                                                                     type: 'submit',
-                                                                                    value: 'submit' })
+                                                                                    value: 'Submit Profile' })
                                                             )
                                                 )
                                     );

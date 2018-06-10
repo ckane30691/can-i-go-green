@@ -231,7 +231,7 @@ class ProfileForm extends React.Component {
   						<input
   							className="profile-submit"
   							type="submit"
-  							value="submit" />
+  							value="Submit Profile" />
 
   					</form>
   				</div>
